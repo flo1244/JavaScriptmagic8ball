@@ -1,22 +1,22 @@
 // JavaScript Document
-$(document).ready(function(){
+$(document).ready(function(){ //This makes it clear to the DOM that there's jQuery/jQueryUI at work!
  
     var magic8Ball = {};
     magic8Ball.listOfAnswers = ["No", "Yes", "I don't think so...", "Of course!", "Indubitably", "In your dreams.", "Reply hazy try again", "Concentrate and ask again", "You may rely on it", "Signs point to yes", "Very doubtful", "As I see it, yes"];
 	
 	$("#answer").hide();
 	
-	//Answerubg the function
-	magic8Ball.askQuestion = function(question)
+	//Answer the function
+	magic8Ball.askQuestion = function(question) // define the method
 	{
 		
 		$("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballAnswer.png");
 		$("#answer").fadeIn(4000);
 		
-        var randomNumber = Math.random();
-        var randomNumberForListOfAnswers = (randomNumber * this.listOfAnswers.length);
-        var randomIndex = Math.floor(randomNumberForListOfAnswers);
-        var answer = this.listOfAnswers[randomIndex];
+        var randomNumber = Math.random();// create a random number
+        var randomNumberForListOfAnswers = (randomNumber * this.listOfAnswers.length); // make the random number between 0 and the number of items in your array
+        var randomIndex = Math.floor(randomNumberForListOfAnswers); // round down the number to be a whole number
+        var answer = this.listOfAnswers[randomIndex]; // use that number to index a random number from the answers array
 		
 		$("#answer").text(answer);
 		
