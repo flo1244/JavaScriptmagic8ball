@@ -14,7 +14,7 @@ $(document).ready(function(){ //This makes it clear to the DOM that there's jQue
 		$("#answer").fadeIn(4000);
 		
         var randomNumber = Math.random();// create a random number
-        var randomNumberForListOfAnswers = (randomNumber * this.listOfAnswers.length); // make the random number between 0 and the number of items in your array
+        var randomNumberForListOfAnswers = (randomNumber * this.listOfAnswers.length); // make the random number between 0 and the number of items in the array
         var randomIndex = Math.floor(randomNumberForListOfAnswers); // round down the number to be a whole number
         var answer = this.listOfAnswers[randomIndex]; // use that number to index a random number from the answers array
 		
